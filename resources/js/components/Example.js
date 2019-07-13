@@ -60,6 +60,7 @@ export default class Example extends Component {
 
         try {
 
+            console.log(1);
             const res = await fetch(`${url}api/transfer`, {
                 method: 'POST', 
                 body: JSON.stringify(this.state.form),
@@ -68,11 +69,10 @@ export default class Example extends Component {
                     'Content-Type': 'application/json'
                 }
             });
-
             console.log(2);
+
             const transfer = await res.json();
 
-            console.log(3);
             this.setState({
                 money: parseInt(this.state.money) + parseInt(transfer.amount),
                 transfers: this.state.transfers.concat(transfer)
