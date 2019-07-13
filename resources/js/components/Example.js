@@ -64,6 +64,7 @@ export default class Example extends Component {
                 method: 'POST', 
                 body: JSON.stringify(this.state.form),
                 headers: {
+                    'Accpet': 'application/json',
                     'Content-Type': 'application/json'
                 }
             });
