@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import TransferForm from './TransferForm';
 import TransferList from './TransferList';
-import url from '../config';
+import url from '../../config';
 
 export default class Example extends Component {
 
@@ -61,7 +61,7 @@ export default class Example extends Component {
         try {
 
             const res = await fetch(`${url}api/transfer`, {
-                method: 'POST', 
+                method: 'POST',
                 body: JSON.stringify(this.state.form),
                 headers: {
                     'Accept': 'application/json',
@@ -87,7 +87,7 @@ export default class Example extends Component {
         }
 
     }
-
+ 
     render() {
         return (
             <div className="container">

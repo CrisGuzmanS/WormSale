@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TransferList = ({ transfers }) => (
-    <table className="table">
+    <table className="table table-striped">
         <tbody>
             {transfers.map((transfer) => (
                 <tr key={transfer.id}>
